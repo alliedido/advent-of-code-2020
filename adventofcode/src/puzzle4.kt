@@ -56,13 +56,7 @@ fun main() {
 }
 
 fun countValidInput(input : List<Passport>) : Int {
-    var counter = 0
-    for (passport in input) {
-        if (passport.isValid2()) {
-            counter++
-        }
-    }
-    return counter
+    return input.count { it.isValid2() }
 }
 
 fun parseInput(input : List<String>) : List<Passport> {
